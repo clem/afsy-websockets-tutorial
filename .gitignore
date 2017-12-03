@@ -1,3 +1,7 @@
+# IDE
+.idea
+
+# Symfony stuff
 /.web-server-pid
 /app/config/parameters.yml
 /build/
