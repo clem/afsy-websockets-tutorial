@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}AFSY - Symfony 3.4 and WebSockets{% endblock title %}</title>
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" />
+  {% endblock stylesheets %}
+</head>
+<body>
+  {% block body %}
+    <div class="container">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  {% endblock body %}
+  {% block javascripts %}{% endblock javascripts %}
+</body>
 </html>
