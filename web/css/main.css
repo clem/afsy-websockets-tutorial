@@ -120,12 +120,15 @@ body {
     color: #fff; }
 
 .chat-right-sidebar {
-  width: 250px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   background: #3a465b; }
   .chat-right-sidebar h1 {
     height: 115px;
     margin: 0;
-    padding: 0 0 0 30px;
+    padding: 0 30px;
     line-height: 115px;
     font: bold 24px/115px "Roboto", "Helvetica", "Arial", Sans-serif;
     color: #e1ebff;

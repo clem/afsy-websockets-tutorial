@@ -1,11 +1,11 @@
 .chat-right-sidebar {
-  width: 250px;
+  flex-grow: 1;
   background: $blue-darker;
 
   h1 {
     height: 115px;
     margin: 0;
-    padding: 0 0 0 30px;
+    padding: 0 30px;
     line-height: 115px;
     font: bold 24px/115px $default-font;
     color: $blue-lightest;
