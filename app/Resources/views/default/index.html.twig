@@ -1,13 +1,4 @@
-{% extends 'base.html.twig' %}
-
-{% block body %}
-    <div class="container">
-      <h1>AFSY - WebSockets and Symfony</h1>
-      <div id="ws-content-receiver"></div>
-      <input type="text" id="ws-content-to-send" />
-      <button id="ws-send-content">Send</button>
-    </div>
-{% endblock %}
+{% extends 'ws-chat/base-chat.html.twig' %}
 
 {% block javascripts %}
   <script type="text/javascript">

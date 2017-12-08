@@ -6,12 +6,25 @@
   li {
     margin: 0 0 20px;
     padding: 20px;
-    color: $grey-lightest;
-    background: $blue-darker;
+    color: $blue-darkest;
+    background: $white;
 
     &.mine {
-      color: $blue-darkest;
-      background: $white;
+      color: $grey-lightest;
+      background: $blue-darker;
+    }
+
+    &.success {
+      background: $green;
+    }
+
+    &.error {
+      background: $red;
+    }
+
+    &.disabled {
+      color: $blue;
+      background: $grey-lighter;
     }
   }
 }

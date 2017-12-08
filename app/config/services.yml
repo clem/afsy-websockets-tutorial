@@ -1,7 +1,12 @@
 # Learn more about services, parameters and containers at
 # https://symfony.com/doc/current/service_container.html
 parameters:
-    #parameter_name: value
+    afsy_website: "https://www.afsy.fr/"
+    advent_calendar_link: "https://afsy.fr/avent/2017/"
+    advent_calendar_link_21: "https://afsy.fr/avent/2017/21-symfony-et-websockets"
+    github_link: "https://github.com/clem/afsy-websockets-tutorial"
+    heroku_link: "#"
+    clem_website: "https://clementdelmas.fr"
 
 services:
     # default configuration for services in *this* file

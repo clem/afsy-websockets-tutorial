@@ -1,0 +1,11 @@
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        afsy_website: '%afsy_website%'
+        advent_calendar_link: '%advent_calendar_link%'
+        advent_calendar_link_21: '%advent_calendar_link_21%'
+        github_link: '%github_link%'
+        heroku_link: '%heroku_link%'
+        clem_website: '%clem_website%'

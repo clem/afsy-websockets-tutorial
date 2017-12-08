@@ -4,9 +4,16 @@ body {
   font-size: 14px;
 }
 
-.chat-container {
+.body-container {
   max-width: 1140px;
+  height: 100%;
   margin: 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}
+
+.chat-container {
   display: flex;
   flex-flow: row;
   background: $grey-lightest;
@@ -19,4 +26,15 @@ body {
 
 .main-content {
   flex-grow: 1;
+}
+
+.chat-footer {
+  margin: 10px 0 50px;
+  text-align: center;
+  color: $blue-darker;
+  font-size: 11px;
+
+  a {
+    color: $blue;
+  }
 }

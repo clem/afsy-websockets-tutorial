@@ -5,29 +5,19 @@
     <aside class="chat-sidebar">
       <nav class="chat-left-sidebar">
         <h2>
-          <a href="https://www.afsy.com" class="afsy-logo">AFSY</a>
+          <a href="{{ afsy_website }}" class="afsy-logo">AFSY</a>
         </h2>
         <ul>
-          <li><a href="#" class="christmas-icon ci-tree">Advent calendar</a></li>
-          <li><a href="#" class="christmas-icon ci-ball">Article #21</a></li>
-          <li class="active"><a href="#" class="christmas-icon ci-rudolph">Chat</a></li>
-          <li><a href="#" class="christmas-icon ci-star">GitHub</a></li>
-          <li><a href="#" class="christmas-icon ci-rocket">Heroku</a></li>
+          <li><a href="{{ advent_calendar_link }}" class="christmas-icon ci-tree">Advent calendar</a></li>
+          <li><a href="{{ advent_calendar_link_21 }}" class="christmas-icon ci-ball">Article #21</a></li>
+          <li class="active"><a href="{{ path('homepage') }}" class="christmas-icon ci-rudolph">Chat</a></li>
+          <li><a href="{{ github_link }}" class="christmas-icon ci-star">GitHub</a></li>
+          <li><a href="{{ heroku_link }}" class="christmas-icon ci-rocket">Heroku</a></li>
         </ul>
       </nav>
       <nav class="chat-right-sidebar">
         <h1>AFSY Chat</h1>
-        <ul class="channels-list">
-          <li class="active">
-            <a href="#general">#general</a>
-          </li>
-          <li>
-            <a href="#afsy">#afsy</a>
-          </li>
-          <li>
-            <a href="#symfony">#symfony</a>
-          </li>
-        </ul>
+        <ul id="ws-channels-list" class="channels-list"></ul>
       </nav>
     </aside>
     <main class="main-content">
@@ -36,24 +26,22 @@
           <strong>This website is just a demo.</strong> Nothing is stored.
         </p>
         <aside class="user-menu">
-          <i class="connection-status active"></i>
-          <span class="username">clem</span>
+          <i id="ws-connection-status" class="connection-status"></i>
+          <span class="username" id="ws-username"></span>
         </aside>
       </header>
-      <ul class="chat-messages-list">
-        <li>ChatBot: Connection established</li>
-        <li>ChatBot: clem joined #general</li>
-        <li class="mine">clem: Hello world!</li>
-        <li>johndoe: Hello clem</li>
-        <li class="mine">clem: This demo is great!</li>
-        <li>johndoe: Yeah, looks like everything works</li>
-      </ul>
-      <form class="message-form">
+      <ul id="ws-content-receiver" class="chat-messages-list"></ul>
+      <form method="post" class="message-form">
         <label for="chat-message">Type your message</label>
-        <input type="text" id="ws-content-to-send" name="chat-message" placeholder="Type your message" />
+        <input type="text" id="ws-content-to-send" name="chat-message"
+            placeholder="Type your message" autocomplete="off" />
         <button id="ws-send-content">Send</button>
       </form>
     </main>
   </div>
+  <footer class="chat-footer">
+    Made with ♥ near Paris by <a href="{{ clem_website }}">Clément Delmas</a> |
+    &copy; All rights reserved - {{ 'now'|date('Y') }}
+  </footer>
 {% endblock %}
 
