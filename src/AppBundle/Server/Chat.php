@@ -60,7 +60,8 @@ class Chat implements MessageComponentInterface
             'action'  => 'message',
             'channel' => $this->defaultChannel,
             'user'    => $this->botName,
-            'message' => sprintf('Connection established. Welcome #%d!', $conn->resourceId)
+            'message' => sprintf('Connection established. Welcome #%d!', $conn->resourceId),
+            'messageClass' => 'success',
         ]));
     }
 
@@ -76,7 +77,7 @@ class Chat implements MessageComponentInterface
             $closedConnection,
             $this->defaultChannel,
             $this->botName,
-            $this->users[$closedConnection->resourceId]['user'].'has disconnected'
+            $this->users[$closedConnection->resourceId]['user'].' has disconnected'
         );
 
         // Remove connection from users
@@ -120,6 +121,11 @@ class Chat implements MessageComponentInterface
         // Check message data
         if ($messageData === null) {
             return false;
+        }
+
+        // Check connection user
+        if (empty($this->users[$conn->resourceId]['user']) && $messageData->user) {
+            $this->users[$conn->resourceId]['user'] = $messageData->user;
         }
 
         // Initialize message data
