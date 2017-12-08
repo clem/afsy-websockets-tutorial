@@ -16,4 +16,13 @@ class DefaultController extends Controller
             'ws_url' => 'localhost:8080',
         ]);
     }
+
+    /**
+     * @Route ("/chat", name="chat")
+     */
+    public function chatAction()
+    {
+        return $this->render('ws-chat/base-chat.html.twig', [
+        ]);
+    }
 }

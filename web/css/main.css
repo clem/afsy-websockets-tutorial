@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.icon, .christmas-icon, .afsy-logo,
+.logo {
+  display: inline-block;
+  overflow: hidden;
+  font: 0/0 a; }
+
+.christmas-icon {
+  width: 100%;
+  height: 80px;
+  background: center center no-repeat; }
+  .christmas-icon.ci-ball {
+    background-image: url("/images/icons/christmas-ball.png"); }
+  .christmas-icon.ci-star {
+    background-image: url("/images/icons/christmas-star.png"); }
+  .christmas-icon.ci-tree {
+    background-image: url("/images/icons/christmas-tree.png"); }
+  .christmas-icon.ci-rocket {
+    background-image: url("/images/icons/rocket.png"); }
+  .christmas-icon.ci-rudolph {
+    background-image: url("/images/icons/rudolph.png"); }
+
+body {
+  background: #000; }
+
+.chat-container {
+  width: 1140px;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  background: #f0f0f0; }
+
+.afsy-logo {
+  width: 100%;
+  height: 115px;
+  background: url("/images/icons/afsy-logo.png") center center no-repeat;
+  border-bottom: 1px solid #495367; }
+
+.chat-left-sidebar {
+  width: 115px;
+  background: #262e3e; }
+  .chat-left-sidebar h2 {
+    height: 115px; }
+  .chat-left-sidebar ul {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .chat-left-sidebar ul li {
+      height: 80px; }
+      .chat-left-sidebar ul li.active, .chat-left-sidebar ul li:hover {
+        background: #3a465b; }
+  .chat-left-sidebar a {
+    color: #fff; }

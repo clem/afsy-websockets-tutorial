@@ -1,0 +1,28 @@
+// Chat Left Sidebar
+.chat-left-sidebar {
+  width: 115px;
+  background: $blue-darkest;
+
+  h2 {
+    height: 115px;
+  }
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+      height: 80px;
+
+      &.active,
+      &:hover {
+        background: $blue-darker;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
