@@ -1,0 +1,17 @@
+.chat-messages-list {
+  height: 410px;
+  padding: 50px;
+  overflow: auto;
+
+  li {
+    margin: 0 0 20px;
+    padding: 20px;
+    color: $grey-lightest;
+    background: $blue-darker;
+
+    &.mine {
+      color: $blue-darkest;
+      background: $white;
+    }
+  }
+}

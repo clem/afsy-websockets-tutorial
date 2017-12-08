@@ -30,6 +30,30 @@
         </ul>
       </nav>
     </aside>
+    <main class="main-content">
+      <header class="main-content-header">
+        <p class="warning">
+          <strong>This website is just a demo.</strong> Nothing is stored.
+        </p>
+        <aside class="user-menu">
+          <i class="connection-status active"></i>
+          <span class="username">clem</span>
+        </aside>
+      </header>
+      <ul class="chat-messages-list">
+        <li>ChatBot: Connection established</li>
+        <li>ChatBot: clem joined #general</li>
+        <li class="mine">clem: Hello world!</li>
+        <li>johndoe: Hello clem</li>
+        <li class="mine">clem: This demo is great!</li>
+        <li>johndoe: Yeah, looks like everything works</li>
+      </ul>
+      <form class="message-form">
+        <label for="chat-message">Type your message</label>
+        <input type="text" id="ws-content-to-send" name="chat-message" placeholder="Type your message" />
+        <button id="ws-send-content">Send</button>
+      </form>
+    </main>
   </div>
 {% endblock %}
 

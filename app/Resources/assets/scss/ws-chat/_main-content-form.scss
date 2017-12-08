@@ -1,0 +1,29 @@
+.message-form {
+  display: flex;
+  background: $white;
+
+  label {
+    display: none;
+  }
+
+  input {
+    flex-grow: 1;
+    padding: 50px;
+    font-size: 14px;
+    color: $blue-darker;
+    outline: 0;
+    border: 0;
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    margin: 30px 50px 30px 0;
+    color: $white;
+    border: 0;
+    background: $blue-darker url('/images/icons/paper-plane.png') center center no-repeat;
+    font: 0/0 a;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

@@ -4,8 +4,16 @@
 @import 'common/fonts';
 @import 'common/icons';
 
-// WebSocket Chat
+// WebSocket Chat - General
 @import 'ws-chat/_christmas-icons';
 @import 'ws-chat/layout';
+
+// Sidebar
 @import 'ws-chat/left-sidebar';
 @import 'ws-chat/right-sidebar';
+
+// Main content
+@import 'ws-chat/main-content-header';
+@import 'ws-chat/main-content-messages';
+@import 'ws-chat/main-content-form';
+

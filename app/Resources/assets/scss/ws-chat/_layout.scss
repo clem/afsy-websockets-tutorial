@@ -1,5 +1,7 @@
 body {
   background: $black;
+  font-family: $default-font;
+  font-size: 14px;
 }
 
 .chat-container {
@@ -13,4 +15,8 @@ body {
 .chat-sidebar {
   display: flex;
   flex-flow: row;
+}
+
+.main-content {
+  flex-grow: 1;
 }
