@@ -136,7 +136,7 @@
   };
 
   // Ask user's name
-  while (userName.length === 0) {
+  while (userName === null || userName.length === 0) {
     userName = prompt('Hi! I need your name for the Chat please :)');
   }
 
