@@ -1,0 +1,45 @@
+.chat-right-sidebar {
+  width: 250px;
+  background: $blue-darker;
+
+  h1 {
+    height: 115px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    line-height: 115px;
+    font: bold 24px/115px $default-font;
+    color: $blue-lightest;
+    border-bottom: 1px solid $blue;
+  }
+
+  ul {
+    margin: 0;
+    padding: 30px 0 0 30px;
+
+    li {
+      height: 50px;
+      padding: 0 0 0 15px;
+      font: normal 14px $default-font;
+
+      a {
+        line-height: 50px;
+        color: $blue-lighter;
+        text-decoration: none;
+      }
+
+      &.active {
+        margin: 10px 0;
+        background: $grey-lightest;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          color: $blue-darkest;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

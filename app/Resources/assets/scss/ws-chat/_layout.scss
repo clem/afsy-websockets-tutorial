@@ -10,11 +10,7 @@ body {
   background: $grey-lightest;
 }
 
-.afsy-logo {
-  @extend .icon;
-
-  width: 100%;
-  height: 115px;
-  background: url('/images/icons/afsy-logo.png') center center no-repeat;
-  border-bottom: 1px solid $blue;
+.chat-sidebar {
+  display: flex;
+  flex-flow: row;
 }
