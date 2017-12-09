@@ -1,3 +1,21 @@
+.main-content-header {
+  width: calc(100% - 100px);
+  height: 15px;
+  padding: 50px;
+  border-bottom: 1px solid $main-content-header-border-color;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  .warning {
+    color: $main-content-header-color;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
 .user-menu {
   min-width: 130px;
   min-height: 14px;
@@ -6,9 +24,9 @@
   margin: -16px 0 0;
   padding: 15px;
   line-height: 1.5em;
-  border: 1px solid $grey-lighter;
-  border-radius: 5px;
-  background: $white;
+  border: 1px solid $user-menu-border-color;
+  border-radius: $default-radius;
+  background: $user-menu-background-color;
 
   .connection-status {
     width: 7px;
@@ -16,33 +34,15 @@
     margin: 0 7px 0 0;
     display: inline-block;
     border-radius: 50%;
-    background: $red;
+    background: $error-color;
 
     &.active {
-      background: $green;
+      background: $success-color;
     }
   }
 
   .username {
     max-width: 95%;
     display: inline-block;
-  }
-}
-
-.main-content-header {
-  width: calc(100% - 100px);
-  height: 15px;
-  padding: 50px;
-  border-bottom: 1px solid $blue;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-
-  .warning {
-    color: $blue-darker;
-
-    strong {
-      font-weight: bold;
-    }
   }
 }

@@ -6,25 +6,25 @@
   li {
     margin: 0 0 20px;
     padding: 20px;
-    color: $blue-darkest;
-    background: $white;
+    color: $default-message-color;
+    background: $default-message-background-color;
 
     &.mine {
-      color: $grey-lightest;
-      background: $blue-darker;
+      color: $my-message-color;
+      background: $my-message-background-color;
     }
 
     &.success {
-      background: $green;
+      background: $success-color;
     }
 
     &.error {
-      background: $red;
+      background: $error-color;
     }
 
     &.disabled {
-      color: $blue;
-      background: $grey-lighter;
+      color: $disabled-message-color;
+      background: $disabled-message-background-color;
     }
   }
 }

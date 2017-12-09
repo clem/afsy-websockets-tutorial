@@ -6,22 +6,22 @@
   background: center center no-repeat;
 
   &.ci-ball {
-    background-image: url('/images/icons/christmas-ball.png');
+    background-image: url($icons-folder + 'christmas-ball.png');
   }
 
   &.ci-star {
-    background-image: url('/images/icons/christmas-star.png');
+    background-image: url($icons-folder + 'christmas-star.png');
   }
 
   &.ci-tree {
-    background-image: url('/images/icons/christmas-tree.png');
+    background-image: url($icons-folder + 'christmas-tree.png');
   }
 
   &.ci-rocket {
-    background-image: url('/images/icons/rocket.png');
+    background-image: url($icons-folder + 'rocket.png');
   }
 
   &.ci-rudolph {
-    background-image: url('/images/icons/rudolph.png');
+    background-image: url($icons-folder + 'rudolph.png');
   }
 }

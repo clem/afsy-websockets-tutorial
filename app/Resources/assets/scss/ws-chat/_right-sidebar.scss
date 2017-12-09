@@ -1,6 +1,9 @@
 .chat-right-sidebar {
+  max-width: 250px;
+  display: flex;
+  flex-flow: column;
   flex-grow: 1;
-  background: $blue-darker;
+  background: $right-sidebar-background-color;
 
   h1 {
     height: 115px;
@@ -8,17 +11,18 @@
     padding: 0 30px;
     line-height: 115px;
     font: bold 24px/115px $default-font;
-    color: $blue-lightest;
-    border-bottom: 1px solid $blue;
+    color: $main-title-color;
+    border-bottom: 1px solid $sidebar-top-border-color;
   }
 
   ul {
+    flex-grow: 1;
     margin: 0;
     padding: 30px 0 0 30px;
 
     li {
-      height: 50px;
-      padding: 0 0 0 15px;
+      min-height: 50px;
+      padding: 0 50px 0 15px;
       font: normal 14px $default-font;
 
       a {
@@ -29,17 +33,16 @@
 
       &.active {
         margin: 10px 0;
-        background: $grey-lightest;
+        background: $selected-channel-background-color;
 
         &:first-child {
           margin-top: 0;
         }
 
         a {
-          color: $blue-darkest;
+          color: $selected-channel-color;
           font-weight: bold;
         }
       }
     }
   }
-}

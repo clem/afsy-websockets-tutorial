@@ -1,5 +1,5 @@
 body {
-  background: $black;
+  background: $body-background-color;
   font-family: $default-font;
   font-size: 14px;
 }
@@ -16,7 +16,7 @@ body {
 .chat-container {
   display: flex;
   flex-flow: row;
-  background: $grey-lightest;
+  background: $main-container-background-color;
 }
 
 .chat-sidebar {
@@ -31,10 +31,10 @@ body {
 .chat-footer {
   margin: 10px 0 50px;
   text-align: center;
-  color: $blue-darker;
+  color: $footer-color;
   font-size: 11px;
 
   a {
-    color: $blue;
+    color: $footer-link-color;
   }
 }

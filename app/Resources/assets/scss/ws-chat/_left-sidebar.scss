@@ -1,7 +1,7 @@
 // Chat Left Sidebar
 .chat-left-sidebar {
   width: 115px;
-  background: $blue-darkest;
+  background: $left-sidebar-background-color;
 
   h2 {
     height: 115px;
@@ -12,8 +12,8 @@
 
     width: 100%;
     height: 115px;
-    background: url('/images/icons/afsy-logo.png') center center no-repeat;
-    border-bottom: 1px solid $blue;
+    background: url($icons-folder + 'afsy-logo.png') center center no-repeat;
+    border-bottom: 1px solid $sidebar-top-border-color;
   }
 
   ul {
@@ -26,12 +26,12 @@
 
       &.active,
       &:hover {
-        background: $blue-darker;
+        background: $right-sidebar-background-color;
       }
     }
   }
 
   a {
-    color: $white;
+    color: $left-sidebar-link-color;
   }
 }
