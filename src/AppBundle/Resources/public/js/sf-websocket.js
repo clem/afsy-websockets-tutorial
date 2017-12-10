@@ -103,7 +103,7 @@
 
     // Update messages list
     _receiver.innerHTML += '<li class="' + liClass + '">' +
-        _message.user + ': ' + _message.message +
+        '<strong>' + _message.user + '</strong>: ' + _message.message +
       '</li>';
   };
 
