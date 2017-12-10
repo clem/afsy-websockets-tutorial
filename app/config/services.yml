@@ -5,7 +5,7 @@ parameters:
     advent_calendar_link: "https://afsy.fr/avent/2017/"
     advent_calendar_link_21: "https://afsy.fr/avent/2017/21-symfony-et-websockets"
     github_link: "https://github.com/clem/afsy-websockets-tutorial"
-    heroku_link: "#"
+    heroku_link: "https://afsy-chat.herokuapp.com/"
     clem_website: "https://clementdelmas.fr"
 
 services:
