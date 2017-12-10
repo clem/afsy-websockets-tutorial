@@ -1,6 +1,6 @@
 .icon,
 .logo {
-  display: inline-block;
+  display: block; // To prevent safari bug
   overflow: hidden;
   font: 0/0 a;
 }

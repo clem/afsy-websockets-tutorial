@@ -45,9 +45,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+strong {
+  font-weight: bold; }
+
 .icon, .christmas-icon, .chat-left-sidebar .afsy-logo,
 .logo {
-  display: inline-block;
+  display: block;
   overflow: hidden;
   font: 0/0 a; }
 
@@ -111,7 +114,7 @@ body {
     border-bottom: 1px solid #495367; }
   .chat-left-sidebar ul {
     width: 100%;
-    margin: 0;
+    margin: 1px 0 0;
     padding: 0; }
     .chat-left-sidebar ul li {
       height: 80px; }
@@ -165,8 +168,6 @@ body {
   justify-content: space-between; }
   .main-content-header .warning {
     color: #262e3e; }
-    .main-content-header .warning strong {
-      font-weight: bold; }
 
 .user-menu {
   min-width: 130px;
