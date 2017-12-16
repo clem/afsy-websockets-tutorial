@@ -3,6 +3,11 @@ $black: #000;
 $grey-lighter: #e0e0e0;
 $grey-lightest: #f0f0f0;
 $white: #fff;
+$transparent-white: rgba(255, 255, 255, .7);
+
+// Success and errors
+$lightgreen: #7ed321;
+$red: #d0021b;
 
 // Main colors
 $blue-darkest: #18202f;
@@ -11,6 +16,16 @@ $blue-dark: #3a465b;
 $blue: #495367;
 $blue-lighter: #8190b0;
 $blue-lightest: #e1ebff;
-$green: #7ed321;
-$red: #d0021b;
 
+// Christmas colors
+$xmas-red-darker: #8c1c13;
+$xmas-red: #c91713;
+$xmas-red-lighter: #bf4342;
+$xmas-green-darker: #20421c;
+$xmas-green: #3e6a34;
+$xmas-green-lighter: #9eaa92;
+$xmas-gold-darker: #dab258;
+$xmas-gold: #d8bc8d;
+$xmas-blue-dark: #011936;
+$xmas-beige: #e7d7c1;
+$xmas-grey-light: #f0f1eb;

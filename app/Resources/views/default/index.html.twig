@@ -4,6 +4,8 @@
   <script type="text/javascript">
     // Create WebSocket url (used in sf-websocket.js)
     var wsUrl = '{{ ws_url }}';
+    var itsChristmas = {{ its_christmas ? 'true' : 'false' }};
+    var xmasLink = '{{ xmas_link }}';
   </script>
   <script type="text/javascript" src="{{ asset('bundles/app/js/sf-websocket.js') }}"></script>
 {% endblock %}

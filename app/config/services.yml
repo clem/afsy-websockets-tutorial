@@ -7,6 +7,15 @@ parameters:
     github_link: "https://github.com/clem/afsy-websockets-tutorial"
     heroku_link: "https://afsy-chat.herokuapp.com/"
     clem_website: "https://clementdelmas.fr"
+    afsy_post_advent_calendar_link: "https://afsy.fr/blog/calendrier-de-l-avent-2017-par-l-afsy"
+    xmas_links:
+      - "https://www.youtube.com/watch?v=sWEfszb9h8Q" # All I want - Jimmy Fallon & Mariah
+      - "https://www.youtube.com/watch?v=JKJExBXRorA" # All I want - Carpool Karaoke
+      - "https://www.youtube.com/watch?v=yXQViqx6GMY" # All I want - Mariah
+      - "https://www.youtube.com/watch?v=E8gmARGvPlI" # Last Christmas - Wham!
+      - "https://www.youtube.com/watch?v=itcMLwMEeMQ" # Jingle Bell Rock - Bobby Helms
+      - "https://www.youtube.com/watch?v=mN7LW0Y00kE" # Let it Snow! - Dean Martin
+      - "https://www.youtube.com/watch?v=InYvRyX2Fu4" # All I want is Chatroulette
 
 services:
     # default configuration for services in *this* file

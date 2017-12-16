@@ -1,4 +1,4 @@
-/* globals wsUrl: true */
+/* globals wsUrl: true, itsChristmas: true, xmasLink: true */
 (function () {
   'use strict';
 
@@ -159,6 +159,14 @@
     // Add default channel in channels list
     addChannel(defaultChannel);
     activateChannel(defaultChannel);
+
+    // Just for the fun, add a fake Christmas channel
+    if (itsChristmas) {
+      addChannel('christmas');
+      var christmasChan = document.querySelectorAll('a[href="#christmas"]')[0];
+      christmasChan.setAttribute('href', xmasLink);
+      christmasChan.setAttribute('target', '_blank');
+    }
 
     // Subscribe to default channel
     ws.send(JSON.stringify({

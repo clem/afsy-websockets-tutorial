@@ -1,6 +1,25 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+  {% if its_christmas %}
+    <link rel="stylesheet" href="{{ asset('css/main-christmas.css') }}"/>
+  {% else %}
+    {{ parent() }}
+  {% endif %}
+{% endblock %}
+
 {% block body %}
+  {% block christmas_ribbon %}
+    {% if its_christmas is defined and its_christmas %}
+      <div class="christmas-ribbon-wrapper">
+        <div class="christmas-ribbon">
+          <a href="{{ afsy_post_advent_calendar_link }}" target="_blank">
+            All the AFSY crew wishes you a Merry Christmas!
+          </a>
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
   <div class="chat-container">
     <aside class="chat-sidebar">
       <nav class="chat-left-sidebar">
@@ -24,6 +43,9 @@
       <header class="main-content-header">
         <p class="warning">
           <strong>This website is just a demo.</strong> Nothing is stored.
+          {% if its_christmas %}
+            <strong class="christmas-theme">#ChristmasTheme</strong>
+          {% endif %}
         </p>
         <aside class="user-menu">
           <i id="ws-connection-status" class="connection-status"></i>

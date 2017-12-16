@@ -6,9 +6,10 @@
 
 // Import theme
 @import 'theme/config';
-@import 'theme/colors';
+@import 'theme/christmas-colors';
 
 // WebSocket Chat - General
+@import 'ws-chat/christmas-ribbon';
 @import 'ws-chat/christmas-icons';
 @import 'ws-chat/layout';
 

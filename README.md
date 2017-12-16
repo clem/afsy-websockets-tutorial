@@ -17,6 +17,9 @@ For the design of this interface, I used:
 - https://www.sketchappsources.com/free-source/2521-desktop-mobile-chat-dashboard-sketch-freebie-resource.html
 - http://www.iconarchive.com/show/free-christmas-flat-icons-by-stevelianardo.html
 
+And for the christmas ribbon, I modified 
+[@leecrossley's Christmas ribbon](https://github.com/leecrossley/christmas-ribbon).
+
 ## Comments and questions
 
 If you have any comment or question, don't hesitate to contact me.

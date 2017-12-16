@@ -1,10 +1,12 @@
 // General
 $body-background-color: $black;
 $error-color: $red;
-$success-color: $green;
+$success-color: $lightgreen;
 
 // Main content
 $main-container-background-color: $grey-lightest;
+$top-border-width: 1px;
+$xmas-ribbon-height: 0;
 
 // Main content - Header
 $main-content-header-color: $blue-darker;
@@ -19,6 +21,8 @@ $my-message-color: $grey-lightest;
 $my-message-background-color: $blue-darker;
 $disabled-message-color: $blue;
 $disabled-message-background-color: $grey-lighter;
+$success-message-color: $default-message-color;
+$error-message-color: $default-message-color;
 
 // Main content - Form
 $form-border-top-color: $blue-lightest;

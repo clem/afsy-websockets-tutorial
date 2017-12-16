@@ -15,10 +15,12 @@
     }
 
     &.success {
+      color: $success-message-color;
       background: $success-color;
     }
 
     &.error {
+      color: $error-message-color;
       background: $error-color;
     }
 

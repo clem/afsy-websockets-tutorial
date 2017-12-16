@@ -9,3 +9,4 @@ twig:
         github_link: '%github_link%'
         heroku_link: '%heroku_link%'
         clem_website: '%clem_website%'
+        afsy_post_advent_calendar_link: '%afsy_post_advent_calendar_link%'

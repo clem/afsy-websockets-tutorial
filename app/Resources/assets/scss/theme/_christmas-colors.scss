@@ -1,0 +1,54 @@
+// General
+$body-background-color: $xmas-beige;
+$error-color: $red;
+$success-color: $xmas-green;
+
+// Top Border and Ribbon
+$top-border-width: 2px;
+$xmas-ribbon-height: 30px;
+
+// Main content
+$main-container-background-color: $white;
+
+// Main content - Header
+$main-content-header-color: $xmas-red;
+$main-content-header-border-color: $xmas-red-lighter;
+$user-menu-background-color: $white;
+$user-menu-border-color: $grey-lighter;
+
+// Main content - Messages
+$default-message-color: $xmas-green;
+$default-message-background-color: $xmas-grey-light;
+$my-message-color: $grey-lightest;
+$my-message-background-color: $xmas-gold;
+$disabled-message-color: $blue;
+$disabled-message-background-color: $grey-lighter;
+$success-message-color: $grey-lightest;
+$error-message-color: $grey-lightest;
+
+// Main content - Form
+$form-border-top-color: $xmas-gold;
+$form-background-color: $white;
+$form-button-color: $white;
+$form-button-background-color: $xmas-gold;
+$form-input-color: $form-button-background-color;
+
+// Sidebar
+$sidebar-top-border-color: $xmas-red-lighter;
+
+// Sidebar - Left
+$left-sidebar-background-color: $xmas-red-darker;
+$left-sidebar-link-color: $blue;
+
+// Sidebar - Right
+$main-title-color: $xmas-grey-light;
+$right-sidebar-background-color: $xmas-gold-darker;
+$default-channel-color: $blue-lighter;
+$selected-channel-color: $left-sidebar-background-color;
+$selected-channel-background-color: $main-container-background-color;
+$add-channel-color: $white;
+$add-channel-background-color: $blue-dark;
+
+// Footer
+$footer-color: $xmas-gold;
+$footer-link-color: $xmas-gold;
