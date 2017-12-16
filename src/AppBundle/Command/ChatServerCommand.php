@@ -32,11 +32,14 @@ class ChatServerCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        // Initialize
+        $wsConfig = $this->getContainer()->getParameter('afsy_chat.websocket');
+
         // Create server and run it!
         $server = IoServer::factory(
             new HttpServer(new WsServer(new Chat())),
-            8080,
-            '127.0.0.1'
+            $wsConfig['port'],
+            $wsConfig['host']
         );
         $server->run();
     }

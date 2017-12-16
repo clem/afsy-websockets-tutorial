@@ -13,6 +13,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         // Initialize
+        $wsConfig = $this->container->getParameter('afsy_chat.websocket');
         $itsChristmas = false;
         $xmasLink = '';
 
@@ -29,7 +30,7 @@ class DefaultController extends Controller
 
         // Render template
         return $this->render('default/index.html.twig', [
-            'ws_url' => 'localhost:8080',
+            'ws_url' => $wsConfig['host'].':'.$wsConfig['port'],
             'its_christmas' => $itsChristmas,
             'xmas_link' => $xmasLink,
         ]);
