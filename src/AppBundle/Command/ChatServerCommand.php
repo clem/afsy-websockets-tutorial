@@ -41,6 +41,7 @@ class ChatServerCommand extends ContainerAwareCommand
             $wsConfig['port'],
             $wsConfig['host']
         );
+        echo sprintf('Run server on %s:%s'."\n", $wsConfig['host'], $wsConfig['port']);
         $server->run();
     }
 }
