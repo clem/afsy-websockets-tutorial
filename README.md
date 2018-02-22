@@ -1,3 +1,6 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/clem/afsy-websockets-tutorial/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/clem/afsy-websockets-tutorial/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/clem/afsy-websockets-tutorial/badges/build.png?b=master)](https://scrutinizer-ci.com/g/clem/afsy-websockets-tutorial/build-status/master)
+
 # AFSY Chat - Symfony and Websockets tutorial
 
 This project is a demo of the tutorial I wrote for the [AFSY](https://www.afsy.fr/)
