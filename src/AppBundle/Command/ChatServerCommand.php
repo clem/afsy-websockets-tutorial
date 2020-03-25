@@ -2,18 +2,16 @@
 
 namespace AppBundle\Command;
 
+use AppBundle\Server\Chat;
+use Ratchet\Http\HttpServer;
+use Ratchet\Server\IoServer;
+use Ratchet\WebSocket\WsServer;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use Ratchet\Http\HttpServer;
-use Ratchet\Server\IoServer;
-use Ratchet\WebSocket\WsServer;
-
-use AppBundle\Server\Chat;
-
 /**
- * Chat Server Command
+ * Chat Server Command.
  */
 class ChatServerCommand extends ContainerAwareCommand
 {

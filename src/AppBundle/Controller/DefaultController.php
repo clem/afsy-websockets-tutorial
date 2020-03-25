@@ -19,13 +19,13 @@ class DefaultController extends Controller
 
         // Check if it's Christmas Time
         // Only on december and before the 26th
-        if (date('m') === '12' && (int) date('d') < 26) {
+        if ('12' === date('m') && (int) date('d') < 26) {
             // Set Christmas
             $itsChristmas = true;
 
-            // Get christmas link
+            // Get Christmas link
             $christmasLinks = $this->container->getParameter('xmas_links');
-            $xmasLink = $christmasLinks[rand(0, count($christmasLinks) - 1)];
+            $xmasLink = $christmasLinks[rand(0, \count($christmasLinks) - 1)];
         }
 
         // Render template

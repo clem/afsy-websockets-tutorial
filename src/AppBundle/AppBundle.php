@@ -2,16 +2,16 @@
 
 namespace AppBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 use AppBundle\DependencyInjection\AfsyChatExtension;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * @inheritdoc
+ * {@inheritdoc}
  */
 class AppBundle extends Bundle
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getContainerExtension()
     {

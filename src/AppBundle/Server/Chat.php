@@ -6,7 +6,7 @@ use Ratchet\ConnectionInterface;
 use Ratchet\MessageComponentInterface;
 
 /**
- * Chat Server
+ * Chat Server.
  */
 class Chat implements MessageComponentInterface
 {
@@ -31,7 +31,7 @@ class Chat implements MessageComponentInterface
     private $defaultChannel = 'general';
 
     /**
-     * Chat constructor
+     * Chat constructor.
      */
     public function __construct()
     {
@@ -41,7 +41,7 @@ class Chat implements MessageComponentInterface
     }
 
     /**
-     * A new websocket connection
+     * A new websocket connection.
      *
      * @param ConnectionInterface $conn
      */
@@ -52,23 +52,23 @@ class Chat implements MessageComponentInterface
         $this->users[$conn->resourceId] = [
             'connection' => $conn,
             'user' => '',
-            'channels' => []
+            'channels' => [],
         ];
 
         // Send hello message
         $conn->send(json_encode([
-            'action'  => 'message',
+            'action' => 'message',
             'channel' => $this->defaultChannel,
-            'user'    => $this->botName,
+            'user' => $this->botName,
             'message' => sprintf('Connection established. Welcome #%d!', $conn->resourceId),
             'messageClass' => 'success',
         ]));
     }
 
     /**
-     * A connection is closed
      *
      * @param ConnectionInterface $closedConnection
+     * A connection is closed.
      */
     public function onClose(ConnectionInterface $closedConnection)
     {
@@ -89,7 +89,7 @@ class Chat implements MessageComponentInterface
     }
 
     /**
-     * Error handling
+     * Error handling.
      *
      * @param ConnectionInterface $conn
      * @param \Exception $e
@@ -97,21 +97,21 @@ class Chat implements MessageComponentInterface
     public function onError(ConnectionInterface $conn, \Exception $e)
     {
         $conn->send(json_encode([
-            'action'  => 'message',
+            'action' => 'message',
             'channel' => $this->defaultChannel,
-            'user'    => $this->botName,
-            'message' => 'An error has occurred: '.$e->getMessage()
+            'user' => $this->botName,
+            'message' => 'An error has occurred: '.$e->getMessage(),
         ]));
         $conn->close();
     }
 
     /**
-     * Handle message sending
+     * Handle message sending.
      *
      * @param ConnectionInterface $conn
      * @param string $message
      *
-     * @return boolean - False if message is not a valid JSON or action is invalid
+     * @return bool - False if message is not a valid JSON or action is invalid
      */
     public function onMessage(ConnectionInterface $conn, $message)
     {
@@ -119,7 +119,7 @@ class Chat implements MessageComponentInterface
         $messageData = json_decode($message);
 
         // Check message data
-        if ($messageData === null) {
+        if (null === $messageData) {
             return false;
         }
 
@@ -138,9 +138,11 @@ class Chat implements MessageComponentInterface
         switch ($action) {
             case 'subscribe':
                 $this->subscribeToChannel($conn, $channel, $user);
+
                 return true;
             case 'unsubscribe':
                 $this->unsubscribeFromChannel($conn, $channel, $user);
+
                 return true;
             case 'message':
                 return $this->sendMessageToChannel($conn, $channel, $user, $message);
@@ -154,7 +156,7 @@ class Chat implements MessageComponentInterface
     }
 
     /**
-     * Subscribe connection to a given channel
+     * Subscribe connection to a given channel.
      *
      * @param ConnectionInterface $conn - Active connection
      * @param $channel - Channel to subscribe to
@@ -175,7 +177,7 @@ class Chat implements MessageComponentInterface
     }
 
     /**
-     * Unsubscribe connection to a given channel
+     * Unsubscribe connection to a given channel.
      *
      * @param ConnectionInterface $conn - Active connection
      * @param $channel - Channel to unsubscribe from
@@ -184,7 +186,7 @@ class Chat implements MessageComponentInterface
     private function unsubscribeFromChannel(ConnectionInterface $conn, $channel, $user)
     {
         // Check connection
-        if (array_key_exists($channel, $this->users[$conn->resourceId]['channels'])) {
+        if (\array_key_exists($channel, $this->users[$conn->resourceId]['channels'])) {
             // Delete connection
             unset($this->users[$conn->resourceId]['channels']);
         }
@@ -199,14 +201,14 @@ class Chat implements MessageComponentInterface
     }
 
     /**
-     * Send message to all connections of a given channel
+     * Send message to all connections of a given channel.
      *
      * @param ConnectionInterface $conn - Active connection
      * @param $channel - Channel to send message to
      * @param $user - User's username
      * @param $message - User's message
      *
-     * @return boolean - False if channel doesn't exists
+     * @return bool - False if channel doesn't exists
      */
     private function sendMessageToChannel(ConnectionInterface $conn, $channel, $user, $message)
     {
@@ -219,12 +221,12 @@ class Chat implements MessageComponentInterface
         // Loop to send message to all users
         foreach ($this->users as $connectionId => $userConnection) {
             // Check if user has subscribe to channel
-            if (array_key_exists($channel, $userConnection['channels'])) {
+            if (\array_key_exists($channel, $userConnection['channels'])) {
                 $userConnection['connection']->send(json_encode([
                     'action' => 'message',
                     'channel' => $channel,
                     'user' => $user,
-                    'message' => $message
+                    'message' => $message,
                 ]));
             }
         }
