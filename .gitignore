@@ -22,3 +22,6 @@
 
 # SASS Stuff
 *.sass-cache*
+
+# PHP CS
+.php_cs.cache
